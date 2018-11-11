@@ -1,1 +1,1 @@
-void Input_N ();
+int Input_N ();

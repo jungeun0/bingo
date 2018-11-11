@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Input_N.h"
-#define N Input_N
+#define N Input_N()
 
 /* 
 
@@ -31,19 +31,10 @@
 
 int main(int argc, char *argv[]) {
 
-	int a;
-	
-	
 
 	printf("%d", N);
 	
-	/*int MyBingo[N][N];
-	int NotMyBingo[N][N];*/
-	
-	
-	
-	
-	
+
 	
 	
 	
