@@ -30,11 +30,12 @@
 
 
 int main(int argc, char *argv[]) {
+
 	int a;
 	
 	
 
-	printf("%d", &N);
+	printf("%d", N);
 	
 	/*int MyBingo[N][N];
 	int NotMyBingo[N][N];*/
