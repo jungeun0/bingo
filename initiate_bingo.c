@@ -3,7 +3,7 @@
 
 
 
-void initiate_bingo(int MyBingo[N][N], int NotMyBingo[N][N] ) {
+/*void initiate_bingo(int MyBingo[N][N], int NotMyBingo[N][N] ) {
 	
 	
-}
+}*/
