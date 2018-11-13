@@ -30,12 +30,12 @@ int main(int argc, char *argv[]) {
 
 	
 	initiate_bingo(MyBingo);
-	
 
-
-// initiate_bingo(NotMyBingo);
-	
 	print_bingo(MyBingo);
+	
+	initiate_bingo(NotMyBingo);
+	
+	print_bingo(NotMyBingo);
 
 	return 0;
 }
