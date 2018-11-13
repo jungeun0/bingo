@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define N 3
 
-void initiate_bingo(int MyBingo[N][N],int NotMyBingo[N][N]){
+int initiate_bingo(int X[][]){
 		int i;
 		int j;
 		int a=0;
@@ -13,8 +13,8 @@ void initiate_bingo(int MyBingo[N][N],int NotMyBingo[N][N]){
 	
 		for(i=0;i<N;i++) {
 			for(j=0;j<N;j++){
-				MyBingo[i][j] = rand() % (N^2);
-				C[a] = MyBingo[i][j];
+				X[i][j] = rand() % (N^2);
+				C[a] = X[i][j];
 					for(b=a;b>0;b--){
 						if(C[a] == C[b]){
 							C[a]=0;
@@ -29,6 +29,6 @@ void initiate_bingo(int MyBingo[N][N],int NotMyBingo[N][N]){
 				}	
 		}	
 		//1-3
-	return ;
+	return (X[]][]);
 }	
 
