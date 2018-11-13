@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
 // initiate_bingo(NotMyBingo);
 	
-	//print_bingo(MyBingo);
+	print_bingo(MyBingo);
 
 	return 0;
 }
