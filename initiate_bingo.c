@@ -22,38 +22,7 @@ int initiate_bingo(int X[N][N]){
 			C[i]=0;
 		}
 			
-	
-	/*	for(i=0;i<N;i++) {
-			for(j=0;j<N;j++){
-				rnd = rand()%(N*N)+1;
-				C[a] = rnd;
-					for(b=N*N;b>0;b--){
-						if(C[b] == C[a]){
-						C[a]=0;
-						rnd=0;	
-						printf("a");
-						break;
-						
-						}
-						else{
-						printf("b");
-						}
-					}				
-				
-				if(C[a]==0 ){
-					j--;
-					printf("랄라\n");}
-				else{
-					a++;
-					X[i][j] = rnd;
-					
-					printf("배열값 %d ",X[i][j]); 
-					}			
-			}
-			printf("c");
-			printf("\n");	
-		}	
-		//1-3 */
+
 		
 		for(i=0;i<N;i++){
 			for(j=0;j<N;j++){
@@ -62,7 +31,6 @@ int initiate_bingo(int X[N][N]){
 					if(C[rnd]==0){
 						X[i][j]=rnd;
 						C[rnd] = 1;
-					//	printf("아 ");
 						break;
 					} 
 				}
@@ -72,5 +40,11 @@ int initiate_bingo(int X[N][N]){
 		
 		
 		return (X[N][N]);
+		
+		for(i=0;i<N;i++){
+			for(j=0;j<N;j++){
+				X[i][j] = 0;
+			}
+		}
 }	
 

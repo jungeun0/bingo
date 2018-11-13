@@ -32,6 +32,7 @@ int main(int argc, char *argv[]) {
 	initiate_bingo(MyBingo);
 
 	print_bingo(MyBingo);
+	// 빙고판 초기화가 필요 ! 
 	
 	initiate_bingo(NotMyBingo);
 	
