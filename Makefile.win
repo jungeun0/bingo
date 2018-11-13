@@ -1,17 +1,17 @@
-# Project: Project01
+# Project: Project3
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe -D__DEBUG__
-CC       = gcc.exe -D__DEBUG__
+CPP      = g++.exe
+CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = "../../project\ 01/project-01/main.o" "../../project\ 01/project-01/initial_bingo.o" "../../project\ 01/project-01/Input_N.o" main.o initiate_bingo.o Input_N.o
-LINKOBJ  = "../../project 01/project-01/main.o" "../../project 01/project-01/initial_bingo.o" "../../project 01/project-01/Input_N.o" main.o initiate_bingo.o Input_N.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+OBJ      = initiate_bingo.o main.o print_bingo.o
+LINKOBJ  = initiate_bingo.o main.o print_bingo.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = bingo.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
+BIN      = Project3.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,20 +24,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-"../../project\ 01/project-01/main.o": ../../project\ 01/project-01/main.c
-	$(CC) -c "../../project 01/project-01/main.c" -o "../../project 01/project-01/main.o" $(CFLAGS)
-
-"../../project\ 01/project-01/initial_bingo.o": ../../project\ 01/project-01/initial_bingo.c
-	$(CC) -c "../../project 01/project-01/initial_bingo.c" -o "../../project 01/project-01/initial_bingo.o" $(CFLAGS)
-
-"../../project\ 01/project-01/Input_N.o": ../../project\ 01/project-01/Input_N.c
-	$(CC) -c "../../project 01/project-01/Input_N.c" -o "../../project 01/project-01/Input_N.o" $(CFLAGS)
+initiate_bingo.o: initiate_bingo.c
+	$(CC) -c initiate_bingo.c -o initiate_bingo.o $(CFLAGS)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
 
-initiate_bingo.o: initiate_bingo.c
-	$(CC) -c initiate_bingo.c -o initiate_bingo.o $(CFLAGS)
-
-Input_N.o: Input_N.c
-	$(CC) -c Input_N.c -o Input_N.o $(CFLAGS)
+print_bingo.o: print_bingo.c
+	$(CC) -c print_bingo.c -o print_bingo.o $(CFLAGS)
