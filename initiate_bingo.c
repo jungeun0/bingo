@@ -8,7 +8,7 @@ int initiate_bingo(int X[N][N]){
 		int j;
 		int a=0;
 		int b;
-		int C[N^2] = {1};
+		int C[N*N] = {1};
 		int rnd;
 		
 		srand((unsigned int)time(NULL));
@@ -23,22 +23,31 @@ int initiate_bingo(int X[N][N]){
 	
 		for(i=0;i<N;i++) {
 			for(j=0;j<N;j++){
-				X[i][j] = rand() % (N*N) + 1;
-				C[a] = X[i][j];
-				for(b=N*N;b>0;b--){
-					if(C[a] == C[b]){
+				rnd = rand()%(N*N)+1;
+				C[a] = rnd;
+					for(b=N*N;b>0;b--){
+						if(C[b] == C[a]){
 						C[a]=0;
-						X[i][j]=0;
-						j--;
-						//printf("3");
-						break; //무한루프 도는중 ... 왜지 ! 
-					}
-				}
-				if(C[a] != 0){
+						rnd=0;	
+						printf("a");
+						break;
+						
+						}
+						else{
+						printf("b");
+						}
+					}				
+				
+				if(C[a]==0 ) {
+					j--;}
+				else{
 					a++;
-					printf("%d\n",X[i][j]); 
-					printf("1");}			
-			}	
+					X[i][j] = rnd;
+					printf("배열값 %d ",X[i][j]); 
+					}			
+			}
+			printf("c");
+			printf("\n");	
 		}	
 		//1-3
 		return (X[N][N]);

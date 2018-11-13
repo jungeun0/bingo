@@ -27,13 +27,15 @@ int main(int argc, char *argv[]) {
 	
 	int MyBingo[N][N];
 	int NotMyBingo[N][N];
-	
+
 	
 	initiate_bingo(MyBingo);
 	
-	initiate_bingo(NotMyBingo);
+
+
+// initiate_bingo(NotMyBingo);
 	
-	print_bingo(MyBingo);
+	//print_bingo(MyBingo);
 
 	return 0;
 }
