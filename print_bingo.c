@@ -7,7 +7,6 @@ void print_bingo(int Y[N][N]){
 	int i;
 	int j;
 	
-
 	
 	for(i=0;i<N;i++){
 		for(j=0;j<N;j++){

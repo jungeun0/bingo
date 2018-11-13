@@ -30,11 +30,14 @@ int initiate_bingo(int X[N][N]){
 						C[a]=0;
 						X[i][j]=0;
 						j--;
-						break;
+						//printf("3");
+						break; //무한루프 도는중 ... 왜지 ! 
 					}
 				}
 				if(C[a] != 0){
-					a++;}			
+					a++;
+					printf("%d\n",X[i][j]); 
+					printf("1");}			
 			}	
 		}	
 		//1-3
