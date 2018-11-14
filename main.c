@@ -6,10 +6,12 @@
 #include "initiate_bingo.h"	
 int main(int argc, char *argv[]) {
 	
-	
+	int k=0;
+	int j=0;
 	
 	int MyBingo[N][N];
 	int NotMyBingo[N][N];
+	int MIAOW[N*N] = {0}; //빙고게임을 하며 숫자를 입력받을 때 중복된 수인지 아닌지 확인하는 배열 
 
 	srand((unsigned int)time(NULL));
 	
@@ -17,14 +19,27 @@ int main(int argc, char *argv[]) {
 
 	initiate_bingo(NotMyBingo);
 	
-	print_bingo(MyBingo);
+	print_bingo(MyBingo);//2-1
 	
 	//print_bingo(NotMyBingo);
 	
+	while(1){
+		while(1){
+			k = get_number_byMe(); //사용자에게 받은 값을 변수에 저장 
+			if(MIAOW[k]==0){ //처음 받는 변수인 경우 
+				MIAOW[k] = 1;  //변수를 받았다고 표시 
+				break;
+			}
+		}
+		
+		
+		}
+		
+	return 0;	
+		
+	}
 	
 	
-	return 0;
-}
 /* 
 		
 			2.빙고 게임 시작

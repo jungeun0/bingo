@@ -16,8 +16,6 @@ void print_bingo(int Y[N][N]){
 		printf("\n");
 	}
 	printf("------\n\n"); 
-	printf("%d째 판입니다.\n",n);
 	
-	n++;
 	
 }
