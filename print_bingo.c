@@ -17,5 +17,4 @@ void print_bingo(int Y[N][N]){
 	}
 	printf("------\n\n"); 
 	
-	
 }

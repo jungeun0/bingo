@@ -4,7 +4,10 @@
 #define M 3	//1-2
 #include <time.h>
 #include "initiate_bingo.h"	
-int main(int argc, char *argv[]) {
+#include "get_number_byMe.h"	
+#include "process_bingo.h"
+ 
+int main(int argc, char *argv[]){
 	
 	int k=0;
 	int j=0;
@@ -31,14 +34,17 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 		}
+		process_bingo(MyBingo,NotMyBingo,k);
 		
+		print_bingo(MyBingo);
 		
+		break;
 		}
 		
 	return 0;	
 		
-	}
 	
+}
 	
 /* 
 		
