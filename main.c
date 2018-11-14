@@ -3,9 +3,28 @@
 #define N 3 //1-1
 #define M 3	//1-2
 #include <time.h>
-#include "initiate_bingo.h"
+#include "initiate_bingo.h"	
+int main(int argc, char *argv[]) {
+	
+	
+	
+	int MyBingo[N][N];
+	int NotMyBingo[N][N];
 
-	/* 
+	srand((unsigned int)time(NULL));
+	
+	initiate_bingo(MyBingo);
+
+	print_bingo(MyBingo);
+	// 빙고판 초기화가 필요 !  -->해결 
+	
+	initiate_bingo(NotMyBingo);
+	
+	print_bingo(NotMyBingo);
+
+	return 0;
+}
+/* 
 			1. 빙고판 만들기
 		1.  N값을 입력받음 --> 기호 상수로 입력 받아서 빙고판 만들 때 활용
 		2.  M값을 입력받음 --> 기호 상수로 입력 받아서 줄 수로 활용
@@ -20,23 +39,3 @@
 		4. 컴퓨터의 차례일 때, 랜덤으로 숫자를 선택하고 선택된 숫자를 표시
 		5. 3의 동작 반복 			
 		*/
-		
-int main(int argc, char *argv[]) {
-	
-	
-	
-	int MyBingo[N][N];
-	int NotMyBingo[N][N];
-
-	
-	initiate_bingo(MyBingo);
-
-	print_bingo(MyBingo);
-	// 빙고판 초기화가 필요 ! 
-	
-	initiate_bingo(NotMyBingo);
-	
-	print_bingo(NotMyBingo);
-
-	return 0;
-}
