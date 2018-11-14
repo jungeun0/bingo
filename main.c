@@ -6,11 +6,13 @@
 #include "initiate_bingo.h"	
 #include "get_number_byMe.h"	
 #include "process_bingo.h"
+#include "get_number_byCom.h"
  
 int main(int argc, char *argv[]){
 	
 	int k=0;
 	int j=0;
+	int n = 1;
 	
 	int MyBingo[N][N];
 	int NotMyBingo[N][N];
@@ -38,7 +40,22 @@ int main(int argc, char *argv[]){
 		
 		print_bingo(MyBingo);
 		
-		break;
+		while(1){
+			k = get_number_byCom();
+			if(MIAOW[k]==0){
+				MIAOW[k] = 1;
+				break;
+			}
+		}
+		process_bingo(MyBingo,NotMyBingo,k);
+		
+		print_bingo(MyBingo);
+		
+		
+		 
+		n++;//빙고가 몇 번째 판인지 세는 변수  
+		
+		
 		}
 		
 	return 0;	

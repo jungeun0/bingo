@@ -22,9 +22,9 @@ int get_number_byMe(){
 				printf("범위 내의 숫자를 입력해 주세요. \n");
 			}
 			else {
-				break;		
+				break;		//범위 내의 숫자인 경우 while 빠져나감 
 			}		
-	}	
+	}	 
 	 
 	
 	return i;
