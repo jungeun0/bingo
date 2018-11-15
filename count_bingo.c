@@ -31,8 +31,6 @@ int count_bingo(int Z[N][N]){
 	}
 	//i가 일정할 때,0의 갯수를 세서 0이 N개일 경우, 가로줄 1줄추가
 	
-	
-	
 	for(j=0;j<N;j++){
 		for(i=0;i<N;i++){
 			if(Z[i][j] == 0){
@@ -47,6 +45,36 @@ int count_bingo(int Z[N][N]){
 			score = 0;
 		}
 	}//j가 일정할 때,0의 갯수를 세서 0이 N개일 경우, 가로줄 1줄추가
+	
+	
+	for(i=0,j=0;i<N,j<N;i++,j++){
+			if(Z[i][j]==0){
+				score++;
+			}
+		}
+	
+	if(score == N){
+		res++;
+		score = 0;
+	}
+	else{
+		score = 0;
+	}
+	
+	for(i=N,j=N;i>0,j>0;i--,j--){
+		if(Z[i][j]==0){
+			score;
+		}
+	}
+	
+	if(score == N){
+		res++;
+		score = 0;
+	}
+	else{
+		
+		score = 0;
+	}	
 	
 	return res;		
 }

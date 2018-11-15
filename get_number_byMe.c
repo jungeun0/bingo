@@ -7,15 +7,13 @@ int get_number_byMe(){
 	
 	int i;
 	
-
-	
 	printf("\n1~(%d * %d)까지의 숫자 중 하나를 입력하세요.\n",N,N);
 	while(1)
 	{
 		scanf("%d",&i);
 							
 							//사용자에게 숫자 받음 
-			if( i<0){
+			if(i<0){
 				printf("범위 내의 숫자를 입력해 주세요. \n");
 			}
 			else if( i > (N*N)){

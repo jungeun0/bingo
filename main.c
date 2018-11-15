@@ -17,12 +17,13 @@ int main(int argc, char *argv[]){
 	int ComBingoNum = 0;
 	int MyBingo[N][N];
 	int ComBingo[N][N];
-	int MIAOW[N*N] = {0}; //빙고게임을 하며 숫자를 입력받을 때 중복된 수인지 아닌지 확인하는 배열 
+	int MIAOW[N*N] = {0};    //빙고게임을 하며 숫자를 입력받을 때 중복된 수인지 아닌지 확인하는 배열 
 
 	srand((unsigned int)time(NULL));
 	
 	printf("--------------------\n");
 	printf("    game start!     \n");
+	printf("--------------------\n");
 
 	initiate_bingo(MyBingo);
 
@@ -52,6 +53,7 @@ int main(int argc, char *argv[]){
 			}
 			
 		}
+		
 		process_bingo(MyBingo,ComBingo,k);
 		
 		printf("나의 빙고판 \n");
@@ -70,6 +72,15 @@ int main(int argc, char *argv[]){
 		ComBingoNum = count_bingo(ComBingo);
 		
 		printf("상대방 빙고의 줄 수는 %d\n",ComBingoNum); 
+		
+		if (MyBingoNum == M){
+			printf("승리하셨습니다 (시도횟수 : %d ) !\n",n);
+			break;
+		}
+		else if (ComBingo == M){
+			printf("패배하셨습니다(시도횟수 : %d ) !\n", n );
+			break; 
+		}
 		 
 		while(1){
 			k = get_number_byCom();
@@ -78,13 +89,16 @@ int main(int argc, char *argv[]){
 				break;
 			}
 		}
+		
+		void turn_function();
+		
 		process_bingo(MyBingo,ComBingo,k);
 		
-		printf("나의 빙고판 \n");
+		printf("   나의 빙고판 \n");
 		
 		print_bingo(MyBingo);
 		
-		printf("상대방의 빙고판 \n");
+		printf("   상대방의 빙고판 \n");
 		
 		print_bingo(ComBingo); 
 		
@@ -94,10 +108,19 @@ int main(int argc, char *argv[]){
 		
 		ComBingoNum = count_bingo(ComBingo);
 		
-		printf("상대방 빙고의 줄 수는 %d\n",ComBingoNum); 
+		printf("상대방 빙고의 줄 수는 %d\n",ComBingoNum);
+		
+		if (MyBingoNum == M){
+			printf("승리하셨습니다 (시도횟수 : %d ) !\n",n);
+			break;
+		}
+		else if (ComBingo == M){
+			printf("패배하셨습니다(시도횟수 : %d ) !\n",n );
+			break; 
+		} 
 		
 		 
-		n++;//빙고가 몇 번째 판인지 세는 변수  
+		n++;  //빙고가 몇 번째 판인지 세는 변수  
 		
 	
 		 
