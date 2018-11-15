@@ -6,7 +6,6 @@ void print_bingo(int Y[N][N]){
 
 	int i;
 	int j;
-	int n=1;
 	
 	printf("------\n"); 
 	for(i=0;i<N;i++){
@@ -16,5 +15,5 @@ void print_bingo(int Y[N][N]){
 		printf("\n");
 	}
 	printf("------\n\n"); 
-	
+	printf("³ªÀÇ ºù°íÆÇ\n");
 }

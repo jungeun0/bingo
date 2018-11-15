@@ -29,17 +29,22 @@ int main(int argc, char *argv[]){
 	//print_bingo(NotMyBingo);
 	
 	while(1){
+		printf("%d 번째 판입니다. \n",n); 
 		while(1){
 			k = get_number_byMe(); //사용자에게 받은 값을 변수에 저장 
 			if(MIAOW[k]==0){ //처음 받는 변수인 경우 
 				MIAOW[k] = 1;  //변수를 받았다고 표시 
 				break;
 			}
+			else if (MIAOW[k]== 1){
+				printf("이미 선택된 수입니다. 다른 수를 선택해주세요.\n");
+			}
+			
 		}
 		process_bingo(MyBingo,NotMyBingo,k);
 		
 		print_bingo(MyBingo);
-		
+		 
 		while(1){
 			k = get_number_byCom();
 			if(MIAOW[k]==0){
@@ -56,14 +61,15 @@ int main(int argc, char *argv[]){
 		n++;//빙고가 몇 번째 판인지 세는 변수  
 		
 		
-		}
+		 
+	}
 		
 	return 0;	
 		
 	
 }
 	
-/* 
+        /* 
 		
 			2.빙고 게임 시작
 		1. 빙고판  상태를 화면에 표시
@@ -72,3 +78,9 @@ int main(int argc, char *argv[]){
 		4. 컴퓨터의 차례일 때, 랜덤으로 숫자를 선택하고 선택된 숫자를 표시
 		5. 3의 동작 반복 			
 		*/
+		/*	
+		
+		
+			3. 빙고 판에서의 줄 수 세기
+			어떻게 하지 .. 
+		*/	 
