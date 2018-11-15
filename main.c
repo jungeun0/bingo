@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
 		 
 		n++;//빙고가 몇 번째 판인지 세는 변수  
 		
-		
+	
 		 
 	}
 		

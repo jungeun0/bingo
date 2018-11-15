@@ -9,7 +9,11 @@ int count_bingo(Z[N][N]){
 	
 	int i;
 	int j;
-	int score;
+	int score=0;
+	int res=0;
+	
+	
+	
 	
 	for(i=0;i<N;i++){
 		for(j=0;j<N;j++){
@@ -17,10 +21,23 @@ int count_bingo(Z[N][N]){
 				score++;
 			}
 		}
+		if (score == N){
+			res ++;
+		}
 	}
+	score = 0;
 	
 	
-	
+	for(j=0;j<N;j++){
+		for(i=0;i<N;i++){
+			if(Z[i][j] == 0){
+				score++;
+			}
+		}
+		if (score == N){
+			res ++;
+		}
+	}
 	
 	
 	
