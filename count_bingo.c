@@ -4,7 +4,7 @@
 #define M 3	//1-2
 
 
-int count_bingo(Z[N][N]){
+int count_bingo(int Z[N][N]){
 	
 	
 	int i;
@@ -23,9 +23,14 @@ int count_bingo(Z[N][N]){
 		}
 		if (score == N){
 			res ++;
+			score = 0;
+		}
+		else {
+			score = 0;
 		}
 	}
-	score = 0;
+	//i가 일정할 때,0의 갯수를 세서 0이 N개일 경우, 가로줄 1줄추가
+	
 	
 	
 	for(j=0;j<N;j++){
@@ -36,15 +41,12 @@ int count_bingo(Z[N][N]){
 		}
 		if (score == N){
 			res ++;
+			score = 0;
 		}
-	}
+		else {
+			score = 0;
+		}
+	}//j가 일정할 때,0의 갯수를 세서 0이 N개일 경우, 가로줄 1줄추가
 	
-	
-	
-	
-	
-	
-	
-		//i가 일정할 때, W배열에서  j가 0~N까지의 값일 경우, 가로줄 1줄추가
-			
+	return res;		
 }

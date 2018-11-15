@@ -44,6 +44,10 @@ int main(int argc, char *argv[]){
 		process_bingo(MyBingo,NotMyBingo,k);
 		
 		print_bingo(MyBingo);
+		
+		printf("내 빙고의 줄 수는 %d\n",count_bingo(MyBingo));
+		
+		printf("상대방 빙고의 줄 수는 %d\n",count_bingo(NotMyBingo)); 
 		 
 		while(1){
 			k = get_number_byCom();
@@ -55,6 +59,10 @@ int main(int argc, char *argv[]){
 		process_bingo(MyBingo,NotMyBingo,k);
 		
 		print_bingo(MyBingo);
+		
+		printf("내 빙고의 줄 수는 %d\n",count_bingo(MyBingo));
+		
+		printf("상대방 빙고의 줄 수는 %d\n",count_bingo(NotMyBingo)); 
 		
 		
 		 
@@ -82,5 +90,5 @@ int main(int argc, char *argv[]){
 		
 		
 			3. 빙고 판에서의 줄 수 세기
-			어떻게 하지 .. 
+			
 		*/	 
