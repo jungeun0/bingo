@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define N 3 //1-1
+#define N 5 //1-1
 #define M 3	//1-2
 
 int get_number_byMe(){
@@ -9,7 +9,7 @@ int get_number_byMe(){
 	
 
 	
-	printf("\n1~N*N까지의 숫자 중 하나를 입력하세요.\n");
+	printf("\n1~(%d * %d)까지의 숫자 중 하나를 입력하세요.\n",N,N);
 	while(1)
 	{
 		scanf("%d",&i);
