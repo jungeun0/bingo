@@ -9,7 +9,7 @@
 #include "get_number_byCom.h"
  
 int main(int argc, char *argv[]){
-	int k=0; //c파일에선 들여쓰기가 멀쩡한데 깃허브에서 들여쓰기가 안바뀌어요 ...  
+	int k=0; 
 	int j=0;
 	int n = 1;
 	int MyBingoNum = 0;
