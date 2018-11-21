@@ -84,6 +84,7 @@ int main(int argc, char *argv[]){
 			printf("\n 비겼습니다(시도횟수 : %d ) !\n",n);
 			break;
 		} 
+		printf("상대방이 번호를 고르고 있습니다 . . . \n");
 		 
 		while(1){
 			k = get_number_byCom();
@@ -124,6 +125,10 @@ int main(int argc, char *argv[]){
 			printf("\n패배하셨습니다(시도횟수 : %d ) !\n", n );
 			break; 
 		}
+		else if (ComBingoNum == M && MyBingoNum == M){
+			printf("\n 비겼습니다(시도횟수 : %d ) !\n",n);
+			break;
+		} 
 		 
 		n++;  //빙고가 몇 번째 판인지 세는 변수  
 		
